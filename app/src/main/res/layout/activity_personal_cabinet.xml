@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    android:id="@+id/tabHost_LC"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/LayoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/personalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:gravity="start|top"
+                    android:textStyle="bold"
+                    android:inputType="textMultiLine" />
+
+                <Button
+                    android:id="@+id/BronInfoButton"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="visibleBron"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_selector"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="10dp"
+                    android:text="Показать заброн. документы"
+                    android:textStyle="bold">
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/BronLay"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp">
+
+                        <ListView
+                            android:id="@+id/myBron"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:divider="@color/colorBlack"
+                            android:dividerHeight="1dp"
+                            android:textFilterEnabled="false">
+
+                        </ListView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/personal_delivButton"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="visibleDeliv"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_selector"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="10dp"
+                    android:text="Показать текущие выдачи"
+                    android:textStyle="bold">
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/DelivLay"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp">
+
+                        <ListView
+                            android:id="@+id/myDeliv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:divider="@color/colorBlack"
+                            android:dividerHeight="1dp"
+                            android:textFilterEnabled="false">
+
+                        </ListView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/indicatorHistory"
+                    android:visibility="invisible"
+                    android:layout_width="50dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarHistory"
+                        android:layout_width="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_height="wrap_content"
+                        android:indeterminateDrawable="@drawable/spinner_ring"
+                        android:indeterminateOnly="true" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/myGettingBooks"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="visibleMyGetBooks"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_selector"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="10dp"
+                    android:text="Показать ранее взятые книги"
+                    android:textStyle="bold">
+
+                </Button>
+
+
+                <LinearLayout
+                    android:id="@+id/myGetBooksLayout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp">
+
+                        <ListView
+                            android:id="@+id/myGettingBooksList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:divider="@color/colorBlack"
+                            android:dividerHeight="1dp"
+                            android:textFilterEnabled="false">
+
+                        </ListView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/myHistory_Books"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="visibleMyHistoryBooks"
+                    android:background="@drawable/button_selector"
+                    android:textColor="@color/colorWhite"
+                    android:text="Показать историю бронирований"
+                    android:textStyle="bold">
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/myHistoryBooksLayout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp">
+
+                        <ListView
+                            android:id="@+id/myHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:divider="@color/colorBlack"
+                            android:dividerHeight="1dp"
+                            android:textFilterEnabled="false">
+
+                        </ListView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutPolka"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/indicatorPolka"
+                    android:visibility="invisible"
+                    android:layout_width="50dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarPolka"
+                        android:layout_width="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_height="wrap_content"
+                        android:indeterminateDrawable="@drawable/spinner_ring"
+                        android:indeterminateOnly="true" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp">
+
+                        <ListView
+                            android:id="@+id/myPolka"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:divider="@color/colorBlack"
+                            android:dividerHeight="1dp"
+                            android:textFilterEnabled="false">
+
+                        </ListView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">KemBibl</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="action_settings">Параметры</string>
+    <string name="action_one_search">Поиск одной строкой</string>
+    <string name="action_title_search">Поиск по названию</string>
+    <string name="action_author_search">Поиск по автору</string>
+    <string name="action_Simple_search">Точный поиск</string>
+    <string name="action_change_user">Сменить пользователя</string>
+    <string name="action_goToMain">Выйти на главный экран</string>
+    <string name="action_simple_search">Точный поиск</string>
+    <string name="action_search">Открыть поиск</string>
+    <string name="title_activity_blank_activity1">blank_activity1</string>
+    <string name="about_page">Про приложение</string>
+    <string name="help_page">Справка</string>
+    <string name="info_mibs">Мобильное приложение «КемБибл: Поиск книг» предназначено для поиска информации в электронном каталоге Муниципальной информационно-библиотечной системы г. Кемерово. Приложение позволяет искать книги, находящиеся в фондах муниципальных библиотек города Кемерово. После авторизации в личном кабинете (необходимо наличие единого читательского билета), возможно бронирование книг, добавление их на свою полку (избранное), просмотр истории выдач и бронирований. Возможен просмотр полных текстов некоторых документов. Также приложение позволяет найти нужную библиотеку на карте (GoogleMaps, ДубльГис). \n\nДанный проект реализован в рамках дипломной работы в КемГУ.
+    </string>
+</resources>

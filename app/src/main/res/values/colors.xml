@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorPurple">#800080</color>
+    <color name="colorVeryGrey">#7f7e7c</color>
+    <color name="colorVeryGreen">#95c15d</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="actionbar_background">#800080</color>
+    <color name="actionbar_text_color">#FFFFFF</color>
+    <color name="colorLightGreen">#90EE90</color>
+    <color name="colorGrey">#B0C4DE</color>
+    <color name="colorBlue">#0000CD</color>
+    <color name="colorBlack">#000000</color>
+</resources>

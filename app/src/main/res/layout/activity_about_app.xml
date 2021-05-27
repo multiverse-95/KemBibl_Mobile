@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kembibl.KemBibl.AboutAppActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/versionApp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text=""
+            android:gravity="center"
+            android:textSize="20sp">
+
+        </TextView>
+        <EditText
+            android:id="@+id/Descr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+
+            android:textSize="17sp"
+            android:inputType="textMultiLine"
+            android:text="@string/info_mibs" />
+        <EditText
+            android:id="@+id/developer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:inputType="textMultiLine"
+            android:text="Разработчик: Вальков Вячеслав" />
+        <TextView
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="19sp"
+            android:text="Сайт каталога:">
+
+        </TextView>
+
+
+        <EditText
+            android:id="@+id/mibs_site"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/colorBlue"
+            android:text="http://catalog.kembibl.ru/" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="19sp"
+            android:text="Сайт МАУК «МИБС»: ">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/mibs_bibl_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/colorBlue"
+            android:text="http://библиотеки.кемеровские.рф" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="19sp"
+            android:text="Сайт КемГУ:">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/kemsu_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:inputType="textMultiLine"
+            android:text="https://kemsu.ru/"
+            android:textColor="@color/colorBlue"/>
+
+    </LinearLayout>
+
+</ScrollView>
